@@ -1,0 +1,38 @@
+.task {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    height: 29%;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+
+.task-container {
+    display: flex;
+    border: 2px solid blue;
+}
+
+
+.task-container-checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+
+.task-container-checkbox-container__checkbox {
+    width: 1.5vw;
+    height: 1.5vw;
+    cursor: pointer;
+}
+
+
+.task-container-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border: 2px solid purple;
+}

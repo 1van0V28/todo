@@ -1,0 +1,14 @@
+.add_task {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.add_task:hover {
+    background-color: lightskyblue;
+}
+
+
+.task_sort {
+    cursor: pointer;
+}
