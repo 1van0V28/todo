@@ -1,38 +1,110 @@
 .task {
+    padding: 0 2.5%;
     flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     width: 95%;
-    height: 29%;
-    border: 2px solid black;
+    height: 30%;
     border-radius: 15px;
+    background-color: #ffffff;
+    transition: transform 0.2s linear;
+}
+
+.task:hover {
+    transform: scale(1.025)
 }
 
 
 .task-container {
     display: flex;
-    border: 2px solid blue;
+    color: #6c757d;
 }
 
 
-.task-container-checkbox-container {
+.task-container--completed {
+    color: #57cc99;
+}
+
+
+.checkbox-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
 }
 
-.task-container-checkbox-container__checkbox {
-    width: 1.5vw;
-    height: 1.5vw;
+.checkbox-container__checkbox {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 10px;
+    accent-color: #57cc99;
     cursor: pointer;
 }
 
 
-.task-container-info-container {
+.info-container {
+    padding: 0 0 0 2.5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
-    border: 2px solid purple;
+    gap: 5%;
+}
+
+.info-container__label {
+    display: block;
+    width: 32.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12.5%;
+    width: 20%;
+}
+
+
+.task-info[open] {
+    padding: 1%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 40%;
+    height: 50%;
+    box-shadow: 0 0 10px 0 #adb5bd;
+    border-radius: 15px;
+    animation: opening 0.25s linear;
+}
+
+@keyframes opening {
+    0% {
+        opacity: 0;
+        transform: scale(0.9)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+.task-info__icon {
+    position: absolute;
+    right: 2%;
+    color: #adb5bd;
+    cursor: pointer;
+}
+
+
+.task-info__icon:active {
+    color: #22577a;
 }

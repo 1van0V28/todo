@@ -3,11 +3,11 @@ import { TaskSortSelector } from "../shared/TaskSortSelector"
 import "../app/styles/styles_features.css"
 
 
-export function ControlPanel() {
+export function ControlPanel(props) {
     return (
         <div className="control_panel">
-            <AddTaskButton />
-            <TaskSortSelector />
+            <AddTaskButton openTaskInfo={props.openTaskInfo}/>
+            <TaskSortSelector setListState={props.setListState}/>
         </div>
     )
 }
