@@ -1,7 +1,7 @@
 import { useState, useRef } from "react"
-import { Header } from "../entities/Header"
-import { Todo } from "../entities/Todo"
-import { TaskInfo } from "../widgets/TaskInfo"
+import { Header } from "../header/Header"
+import { Todo } from "../todo/Todo"
+import { TaskInfo } from "../task_info/TaskInfo"
 
 
 export function Home() {
@@ -27,10 +27,8 @@ export function Home() {
     const deleteTask = function(taskId) {
         const newTodoState = {...todoState}
         delete newTodoState[taskId]
-
         setTodoState(newTodoState)
         localStorage.setItem("todoList", JSON.stringify(newTodoState))
-
     }
 
     const handleSaveClick = function(taskInfo) {

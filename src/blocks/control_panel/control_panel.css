@@ -1,0 +1,39 @@
+.control_panel {
+    padding: 0 0.5% 0.5% 0;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 10%;
+}
+
+
+.control_panel__add_task {
+    width: 20%;
+    background-color: #57cc99;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: 500;
+    color: #ffffff;
+    transition: background-color 0.1s linear;
+    cursor: pointer;
+}
+
+.control_panel__add_task:active {
+    background-color: #3b9a74;
+}
+
+
+.task_sort {
+    padding: 0 0 0 2.5%;
+    outline: none;
+    border-radius: 10px;
+    background-color: #ced4da;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: 400;
+}
+
+
+.task_sort__option {
+    font-weight: 400;
+}

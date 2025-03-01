@@ -1,4 +1,4 @@
-.task {
+.todo_list__task {
     padding: 0 2.5%;
     flex-shrink: 0;
     display: flex;
@@ -10,29 +10,30 @@
     transition: transform 0.2s linear;
 }
 
-.task:hover {
+.todo_list__task:hover {
     transform: scale(1.025)
 }
 
 
-.task-container {
+.todo_list__task_container,
+.todo_list__task_container--completed {
     display: flex;
     color: #6c757d;
 }
 
-
-.task-container--completed {
+.todo_list__task_container--completed {
     color: #57cc99;
 }
 
 
-.checkbox-container {
+.todo_list__checkbox_container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.checkbox-container__checkbox {
+
+.todo_list__checkbox {
     width: 2vw;
     height: 2vw;
     border-radius: 10px;
@@ -41,7 +42,7 @@
 }
 
 
-.info-container {
+.todo_list__info_container {
     padding: 0 0 0 2.5%;
     display: flex;
     flex-direction: column;
@@ -50,19 +51,20 @@
     gap: 5%;
 }
 
-.info-container__label {
+
+.todo_list__label {
+    overflow: hidden;
     display: block;
     width: 32.5rem;
     cursor: pointer;
     font-size: 1.25rem;
     font-weight: 500;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
 }
 
 
-.buttons-container {
+.todo_list__buttons_container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -71,40 +73,28 @@
 }
 
 
-.task-info[open] {
-    padding: 1%;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 40%;
-    height: 50%;
-    box-shadow: 0 0 10px 0 #adb5bd;
-    border-radius: 15px;
-    animation: opening 0.25s linear;
-}
-
-@keyframes opening {
-    0% {
-        opacity: 0;
-        transform: scale(0.9)
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1)
-    }
-}
-
-.task-info__icon {
-    position: absolute;
-    right: 2%;
-    color: #adb5bd;
+.todo_list__task_button {
+    display: flex;
+    padding: 5%;
+    border-radius: 5px;
     cursor: pointer;
+    transition: color 0.2s linear, background-color 0.1s linear;
 }
 
 
-.task-info__icon:active {
+.todo_list__task_button--delete:hover {
+    color: #c1121f;
+}
+
+.todo_list__task_button--delete:active {
+    background-color: #f4a6a1;
+}
+
+
+.todo_list__task_button--edit:hover {
     color: #22577a;
+}
+
+.todo_list__task_button--edit:active {
+    background-color: #a4c8e1;
 }

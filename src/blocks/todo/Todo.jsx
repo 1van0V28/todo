@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { ControlPanel } from "../features/ControlPanel"
-import { TodoList } from "../features/TodoList"
-import "../app/styles/styles_entities.css"
+import { ControlPanel } from "../control_panel/ControlPanel"
+import { TodoList } from "../todo_list/TodoList"
+import "./todo.css"
 
 
 export function Todo(props) {
@@ -9,7 +9,9 @@ export function Todo(props) {
     
     return (
         <main className="todo">
-            <ControlPanel openTaskInfo={props.openTaskInfo} setListState={setListState}/>
+            <ControlPanel 
+            openTaskInfo={props.openTaskInfo} 
+            setListState={setListState} />
             <TodoList 
             listState={listState}
             todoState={props.todoState} 

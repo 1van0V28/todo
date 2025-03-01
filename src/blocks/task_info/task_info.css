@@ -1,0 +1,82 @@
+.task_info[open] {
+    padding: 1%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 40%;
+    height: 50%;
+    box-shadow: 0 0 10px 0 #adb5bd;
+    border-radius: 15px;
+    animation: opening 0.25s linear;
+}
+
+@keyframes opening {
+    0% {
+        opacity: 0;
+        transform: scale(0.9)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+
+.task_info__icon {
+    position: absolute;
+    right: 2%;
+    color: #adb5bd;
+    cursor: pointer;
+}
+
+.task_info__icon:active {
+    color: #22577a;
+}
+
+
+.task_info__input,
+.task_info__text {
+    padding: 2.5%;
+    width: 80%;
+    outline: none;
+    border: 4px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.task_info__input::placeholder {
+    color: #adb5bd;
+}
+
+.task_info__text {
+    margin: 2% 0 4% 0;
+    resize: none;
+    width: 90%;
+    height: 14.5rem;
+    scrollbar-color: #adb5bd #e9ecef; 
+}
+
+.task_info__text::placeholder {
+    color: #adb5bd;
+}
+
+
+.task_info__save_button {
+    padding: 2.5%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #22577a;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: background-color 0.1s linear;
+    cursor: pointer;
+}
+
+.task_info__save_button:active {
+    background-color: #1b3d4d;
+}
