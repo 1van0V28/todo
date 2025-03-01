@@ -13,6 +13,7 @@ export function TaskInfo(props) {
 
     const handleSaveClick = function() {
         props.handleSaveClick(props.taskInfoState)
+        props.closeTaskInfo()
     }
 
     return (
